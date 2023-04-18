@@ -1,0 +1,349 @@
+@font-face{
+	font-family: 'Barieta';
+	src:url('./fuentes/Barieta.otf');
+	font-style: normal;
+}
+@font-face{
+	font-family: 'scrosiet.otf';
+	src:url('./fuentes/scrosiet.otf')
+
+}
+*{
+	padding: 0;
+	margin:0;
+	font-family: 'Barieta', sans-serif;
+
+
+	/*font-family: 'Open Sans', sans-serif;*/
+}
+
+.salute{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	background: black;
+}
+
+.saluteTextContainer{
+	flex:3;
+
+}
+.saluteImgContainer{
+	flex:1;
+
+}
+.saluteImg{
+	width: 100%;
+
+
+}
+.saluteText{
+	color:yellow;
+	font-size: 50vw;
+	cursor: default;
+	margin-top: 10rem;
+
+}
+/*Name*/
+.nameContainer{
+	height: 100vh;
+	background: #000;
+	overflow-x:  hidden;
+	background-image:  url('./img/face.jpeg');
+	background-size: cover;
+	background-position:right; 
+
+
+
+}
+.name{
+	font-size: 15vw;
+	color:transparent;
+	cursor: default;
+	text-align: center;
+	line-height: 100vh;
+	font-weight: bold;
+
+	background-image: url('./img/bg4.jpeg');
+	background-size: cover;
+	background-position-y:center;
+	 background-clip: text;
+  	-webkit-background-clip: text;
+
+}
+
+
+/*JobTitle*/
+
+.jobTitle{
+	font-size: 13vw;
+	color:yellow;
+	line-height: 100vh;
+	cursor: default;
+	text-align: right;
+		
+
+
+}
+.jobTitleContianer{
+		background:url('./img/bg2.jpeg');
+		background-color: #000;
+		height: 100vh;
+		overflow-x: hidden;
+}
+
+/**PROJECTS**/
+.projects{
+	display: flex;
+	flex-direction: column;
+	gap:20vh;
+	padding:0px 100px;
+	background:#000; 
+	
+}
+.porjectTitleContainer{
+	background-color: red;
+	background-image: url('./img/floral.png');
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow-y: hidden;
+
+
+}
+
+.projectsTitle{
+	font-size: 10vw;
+	color:#fff;
+}
+.project{
+	display: flex;
+	align-items: center;
+	gap:100px;
+	height: 100vh;
+	overflow: hidden;
+}
+.isometric>img{
+	
+	 border-radius: 50%;
+
+}
+.projectDetail{
+	flex:1;
+	display: flex;
+	flex-direction: column;
+	gap:50px;
+	align-items: center;
+
+}
+.projectTitle{
+	font-size: 7vw;
+	color:transparent;
+	background-image: url('./img/bg3.jpeg');
+	background-size: cover;
+	background-position-y:center;
+	 background-clip: text;
+  	-webkit-background-clip: text;
+
+
+}
+.projectDesc{
+	font-size: 20px;
+	color:#555;
+	text-align: justify;
+	line-height: 40px;
+	color:#fff;
+}
+.projectButton{
+	padding: 10px 20px;
+	border:2px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: 2px solid #fff;
+	overflow: hidden;
+	position: relative;
+	transition: color 1s;
+}
+.projectButton:hover{
+	color:black;
+}
+.projectButton::before{
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: -50px;
+	width: 0;
+	height: 100%;
+	background-color: #fff;
+	transform: skewX(35deg);
+	z-index: -9999;
+	transition:  width 1s
+}
+.projectButton:hover::before{
+	width: 150%;
+
+}
+
+/*
+.projectButton::after{
+	content: "view demo";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:-100%;
+	transition: 1s all;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #555;
+	color: #222;
+}
+.projectButton:hover::before{
+	transform: translateX(100%);
+}*/
+
+/*Github*/
+.githubContainer{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #000;
+}
+.githubTitle{
+	font-size: 100px;
+	color:#fff;
+	margin-top: 10vh;
+}
+.githubChart{
+	width: 820px;
+	text-align: center;
+}
+.dates{
+	padding: 10px;
+	color:#555;
+	font-size: 12px;
+	display: flex;
+	justify-content: space-between;
+	
+
+}
+
+
+.boxContainer{
+	display: flex;
+	flex-wrap: wrap;
+	gap:5px;
+}
+.box{
+	width: 15px;
+	height: 15px;
+	background-color: green;
+	border-radius: 2px;
+	cursor: pointer;
+	transition:  3s all ease;
+}
+.active{
+	background-color: lightgreen;
+}
+
+.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n+1){
+  background-color: #195b2c;
+}
+.githubChart:hover .active:nth-child(2n){
+  background-color: #063f24;
+}
+
+.githubSm{
+  display: none;
+}
+
+/**Contacte Me**/
+.contactContainer{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color:  black;
+	background-image: url('./img/bg5.jpeg') ;
+	background-position: left bottom;
+	background-size: cover;
+
+
+}
+.titleContactContianer{
+	z-index: 22222;
+	
+	position: absolute;
+}
+.contactTitle{
+	font-size: 100px;
+	color: yellow;
+
+}
+.descContact{
+	color: #fff;
+	font-size: 19px;
+	text-align: center;
+}
+/**paper js**/
+
+#myCanvas{
+}
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+}
+
+/**responsive**/
+@media screen and (max-width:1024px) {
+
+  .projects{
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .project{
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n){
+    flex-direction: column;
+  }
+
+ 
+  .githubChart{
+    display: none;
+  }
+
+  .githubTitle{
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .githubSm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color:#555;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+
+
+
